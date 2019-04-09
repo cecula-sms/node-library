@@ -1,0 +1,25 @@
+{
+  "name": "cecula",
+  "version": "0.0.1",
+  "description": "Cecula NodeJS library for sending A2P and P2P SMS",
+  "main": "cecula.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cecula",
+    "sms",
+    "a2p",
+    "p2p",
+    "bulksms",
+    "bulk",
+    "text",
+    "messaging"
+  ],
+  "homepage": "https://www.cecula.com",
+  "author": "Godwin Noah",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
