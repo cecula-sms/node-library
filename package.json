@@ -1,6 +1,6 @@
 {
   "name": "cecula",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cecula NodeJS library for sending A2P and P2P SMS",
   "main": "cecula.js",
   "scripts": {
