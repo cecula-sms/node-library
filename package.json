@@ -14,12 +14,19 @@
     "bulksms",
     "bulk",
     "text",
-    "messaging"
+    "messaging",
+    "nigeria",
+    "bbn",
+    "api"
   ],
   "homepage": "https://www.cecula.com",
   "author": "Godwin Noah",
   "license": "MIT",
   "dependencies": {
     "request": "^2.88.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cecula-sms/node-library.git"
   }
 }

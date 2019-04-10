@@ -31,7 +31,7 @@ yarn add cecula
 ```
 Clone from GitHub
 ```sh
-git clone https://github.com/cecula/nodejs-library.git
+git clone https://github.com/cecula-sms/nodejs-library.git
 ```
  
 ## How to generate an API Key
@@ -68,13 +68,13 @@ To send SMS with alphanumeric identity to single or multiple contacts, use the c
 Your response should look like this:
  ```sh
     {
-        status: 'sent',
-        reference: 4982953,
-        sentTo: [ '234809xxxxxxx' ],
-        invalid: [],
-        declined: [],
-        declineReason: '',
-        code: 1801
+        "status": 'sent',
+        "reference": "4982953",
+        "sentTo": [ '234809xxxxxxx' ],
+        "invalid": [],
+        "declined": [],
+        "declineReason": '',
+        "code": "1801"
     }
 ```
 ## Sending P2P SMS
@@ -97,20 +97,20 @@ To send a message using numberic identity, use the code below:
 Your response should look like this:
 ```sh
     {
-        status: 'sent',
-        code: 1801,
-        messageID: 2579,
-        sentTo:[
+        "status": "sent",
+        "code": "1801",
+        "messageID": "2579",
+        "sentTo":[
             {
-                recipient: '2349090000246',
-                id: 5990
+                "recipient": "2349090000246",
+                "id": "5990"
             },
             {
-                recipient: '2349090000271',
-                id: 5991
+                "recipient": "2349090000271",
+                "id": "5991"
             }
         ],
-        declined: []
+        "declined": []
     }
 ```
 ## Checking A2P SMS Balance
@@ -124,7 +124,7 @@ To get your A2P SMS Balance, __getA2PBalance__ method is used this way:
 You should get a response like this:
 ```sh
     {
-        balance: 234.1
+        "balance": 234.1
     }
 ```
 ##  Checking Sync Cloud Balance
@@ -138,7 +138,7 @@ This method requires no parameter:
 You should get a response like this
 ```sh
     {
-        balance: 9513
+        "balance": 9513
     }
 ```
 
@@ -158,11 +158,11 @@ The table below shows a list of error codes and their descriptions:
 | CE1002	| Empty Fields |
 | CE1003	| Origin cannot be longer than 11 characters |
 | CE1004	| A2P Message origin must be alphabets only or alphanumeric |
-| CE1005	| Message cannot be longer than 10 pages | 
+| CE1005	| Message cannot be longer than 10 pages |
+| CE1007	| Cannot find the identity on Sync Cloud |
+| CE1008	| Origin is pending verification |
 | CE1009	| Account Unbound. Please Recharge Account and Contact Sales |
 | CE1010	| Numeric Originator must be between 5 - 16 digits long |
 | CE1011	| P2P Message originator must be numeric |
 | CE1012	| Origin is not verified |
-| CE1008	| Origin is pending verification |
-| CE1007	| Cannot find the identity on Sync Cloud |
 | CE1013	| Sync App is Offline. Please check device |
