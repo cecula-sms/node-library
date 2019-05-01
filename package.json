@@ -1,7 +1,7 @@
 {
   "name": "cecula",
   "version": "1.0.1",
-  "description": "Cecula NodeJS library for sending A2P and P2P SMS",
+  "description": "NodeJS library for sending A2P and P2P SMS over the Cecula API",
   "main": "cecula.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
