@@ -6,16 +6,17 @@ A NodeJS package for Cecula.
 [![npm version](https://badge.fury.io/js/cecula.svg)](https://badge.fury.io/js/cecula)
 [![Build Status](https://travis-ci.org/cecula-sms/node-library.svg?branch=master)](https://travis-ci.org/cecula-sms/node-library)
 
--  [Introduction](#introduction)
--  [How to use the library](#how-to-use-this-library)
--  [Installation](#installation)
--  [How to generate an API Key](#how-to-generate-an-api-key)
--  [Importing cecula Library](#importing-cecula-library)
--  [Sending A2P SMS](#sending-a2p-sms)
--  [Sending P2P SMS](#sending-p2p-sms)
--  [Checking A2P SMS Balance](#checking-a2p-sms-balance)
--  [Checking Sync Cloud Balance](#checking-sync-cloud-balance)
--  [Error Responses](#error-responses)
+## Table of Contents
+1. [Introduction](#introduction)
+2. [How to use the library](#how-to-use-this-library)
+3. [Installation](#installation)
+4. [How to generate an API Key](#how-to-generate-an-api-key)
+5. [Importing cecula Library](#importing-cecula-library)
+6. [Sending A2P SMS](#sending-a2p-sms)
+7. [Sending P2P SMS](#sending-p2p-sms)
+8. [Checking A2P SMS Balance](#checking-a2p-sms-balance)
+9. [Checking Sync Cloud Balance](#checking-sync-cloud-balance)
+10. [Error Responses](#error-responses)
 
 ## Introduction
 
