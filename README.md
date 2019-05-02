@@ -1,6 +1,8 @@
 # Cecula SMS
 A NodeJS package for Cecula.
 
+[![NPM](https://nodei.co/npm/cecula.png)](https://nodei.co/npm/cecula/)
+
 [![npm version](https://badge.fury.io/js/cecula.svg)](https://badge.fury.io/js/cecula)
 [![Build Status](https://travis-ci.org/cecula-sms/node-library.svg?branch=master)](https://travis-ci.org/cecula-sms/node-library)
 
