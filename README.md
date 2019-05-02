@@ -1,4 +1,7 @@
 # Cecula SMS
+A NodeJS package for Cecula.
+
+[![npm version](https://badge.fury.io/js/cecula.svg)](https://badge.fury.io/js/cecula)
 
   - [Introduction](#introduction)
   - [How to use the library](#how-to-use-this-library)
