@@ -23,9 +23,9 @@ A NodeJS package for Cecula.
 Cecula SMS Library enables you to quickly integrate and send A2P and P2P Messages from your application.
 
 ## How to use this library
-* Install Cecula SMS from npm or yarn following the instructions in the Installation section or clone from GitHub
-* Login to the <a href="https://developer.cecula.com" target="_blank">Cecula Developers Platform</a> register your app and generate an API KEY
-* Import/Require the library into your script
+*   Install Cecula SMS from npm or yarn following the instructions in the Installation section or clone from GitHub
+*   Login to the <a href="https://developer.cecula.com" target="_blank">Cecula Developers Platform</a> register your app and generate an API KEY
+*   Import/Require the library into your script
 
 ## Installation
 Install with NPM:
@@ -134,7 +134,7 @@ You should get a response like this:
         "balance": 234.1
     }
 ```
-##  Checking Sync Cloud Balance
+## Checking Sync Cloud Balance
 To get your Sync Cloud Balance, __getSyncCloudBalance__ method is used this way:
 This method requires no parameter:
 ```sh
