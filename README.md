@@ -2,6 +2,7 @@
 A NodeJS package for Cecula.
 
 [![npm version](https://badge.fury.io/js/cecula.svg)](https://badge.fury.io/js/cecula)
+[![Build Status](https://travis-ci.org/cecula-sms/node-library.svg?branch=master)](https://travis-ci.org/cecula-sms/node-library)
 
   - [Introduction](#introduction)
   - [How to use the library](#how-to-use-this-library)
