@@ -1,3 +1,7 @@
+
+var mocha = require('mocha');
+var describe = mocha.describe;
+var it = mocha.it;
 const assert = require('chai').assert;
 const cecula = require('../cecula');
 
@@ -12,7 +16,7 @@ const messageObject = {
     ]
 };
 
-describe('Cecula', () => {
+describe('A2P SMS', () => {
     it('Verifying that API Key property is defined in cecula object', function () {
         assert.exists(cecula.apiKey, 'API Key exists');
     });
