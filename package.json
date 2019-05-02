@@ -1,6 +1,6 @@
 {
   "name": "cecula",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NodeJS library for sending A2P and P2P SMS over the Cecula API",
   "main": "cecula.js",
   "scripts": {
@@ -28,5 +28,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cecula-sms/node-library.git"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.0"
   }
 }
