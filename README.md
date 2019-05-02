@@ -23,9 +23,9 @@ A NodeJS package for Cecula.
 Cecula SMS Library enables you to quickly integrate and send A2P and P2P Messages from your application.
 
 ## How to use this library
- * Install Cecula SMS from npm or yarn following the instructions in the Installation section or clone from GitHub
- * Login to the <a href="https://developer.cecula.com" target="_blank">Cecula Developers Platform</a> register your app and generate an API KEY
- * Import/Require the library into your script
+* Install Cecula SMS from npm or yarn following the instructions in the Installation section or clone from GitHub
+* Login to the <a href="https://developer.cecula.com" target="_blank">Cecula Developers Platform</a> register your app and generate an API KEY
+* Import/Require the library into your script
 
 ## Installation
 Install with NPM:
@@ -168,7 +168,7 @@ The table below shows a list of error codes and their descriptions:
 | CE1005	 | Message cannot be longer than 10 pages                       |
 | CE1007	 | Cannot find the identity on Sync Cloud                       |
 | CE1008	 | Origin is pending verification                               |
-| CE1009	 |  Account Unbound. Please Recharge Account and Contact Sales  |
+| CE1009	 | Account Unbound. Please Recharge Account and Contact Sales   |
 | CE1010	 | Numeric Originator must be between 5 - 16 digits long        |
 | CE1011	 | P2P Message originator must be numeric                       |
 | CE1012	 | Origin is not verified                                       |
