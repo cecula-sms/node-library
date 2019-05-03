@@ -4,7 +4,9 @@
   "description": "NodeJS library for sending A2P and P2P SMS over the Cecula API",
   "main": "cecula.js",
   "scripts": {
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage || true",
+    "test": "mocha || true",
+    "test:jest": "jest --coverage --coverageReporters=text-lcov | coveralls || true",
+    "test:istanbul": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage || true",
     "lint-md": "remark ."
   },
   "remarkConfig": {
@@ -50,6 +52,7 @@
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.4",
     "remark-preset-lint-recommended": "^3.0.2",
-    "remark-stringify": "^6.0.4"
+    "remark-stringify": "^6.0.4",
+    "jest": "^24.7.1"
   }
 }
