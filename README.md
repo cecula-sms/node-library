@@ -75,12 +75,12 @@ To send SMS with alphanumeric identity to single or multiple contacts, use the c
 Your response should look like this:
  ```sh
     {
-        "status": 'sent',
+        "status": "sent",
         "reference": "4982953",
-        "sentTo": [ '234809xxxxxxx' ],
+        "sentTo": [ "234809xxxxxxx" ],
         "invalid": [],
         "declined": [],
-        "declineReason": '',
+        "declineReason": "234809xxxxxxx",
         "code": "1801"
     }
 ```
