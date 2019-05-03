@@ -7,6 +7,8 @@ A NodeJS package for Cecula.
 [![Build Status](https://travis-ci.org/cecula-sms/node-library.svg?branch=master)](https://travis-ci.org/cecula-sms/node-library)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7638cf03c6b4adc807d662f2063974a)](https://www.codacy.com/app/godwin-noah/node-library?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cecula-sms/node-library&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/cecula-sms/node-library/branch/master/graph/badge.svg)](https://codecov.io/gh/cecula-sms/node-library)
+[![Known Vulnerabilities](https://snyk.io/test/github/cecula-sms/node-library/badge.svg)](https://snyk.io/test/github/cecula-sms/node-library) 
+
 
 ## Table of Contents
 1.  [Introduction](#introduction)
