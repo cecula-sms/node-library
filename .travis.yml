@@ -7,4 +7,5 @@ node_js:
 
 script:
   - npm run lint-md
-  - npm run test:istanbul
+  - npm run test:nyc
+  - npm run coverage
