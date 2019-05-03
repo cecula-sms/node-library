@@ -5,7 +5,7 @@ cecula.apiKey = "";
 // Send A2P SMS
 cecula.sendA2PSMS = (dataObj, callback) => {
     if (typeof callback !== "function") {
-        console.log("Missing callback argument");
+        console.info("Missing callback argument");
         return null;
     }
 
@@ -17,7 +17,7 @@ cecula.sendA2PSMS = (dataObj, callback) => {
 // Send P2P SMS
 cecula.sendP2PSMS = (dataObj, callback) => {
     if (typeof callback !== "function") {
-        console.log("Missing callback argument");
+        console.info("Missing callback argument");
         return null;
     }
 
@@ -29,7 +29,7 @@ cecula.sendP2PSMS = (dataObj, callback) => {
 // Get A2P SMS Balance
 cecula.getA2PBalance = (callback) => {
     if (typeof callback !== "function") {
-        console.log("Missing callback argument");
+        console.info("Missing callback argument");
         return null;
     }
 
@@ -41,7 +41,7 @@ cecula.getA2PBalance = (callback) => {
 // Get Sync Cloud Balance
 cecula.getSyncCloudBalance = (data, callback) => {
     if (typeof callback !== "function") {
-        console.log("Missing callback argument");
+        console.info("Missing callback argument");
         return null;
     }
 

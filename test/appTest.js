@@ -27,6 +27,10 @@ describe("A2P SMS", () => {
         });
     });
 
+    it("Checking balance without callback returns null", function () {
+        assert.isNull(cecula.getA2PBalance());
+    });
+
     it("Cecula returns 401 when API key is not submitted", function () {
         cecula.getA2PBalance((data) => {
             assert.equal(data.code, 401);
@@ -104,11 +108,47 @@ describe("A2P SMS", () => {
         });
     });
 
+    it("Send A2P SMS without callback", function () {
+        cecula.apiKey = sandboxApiKey;
+        messageObject.origin = "LAB";
+        messageObject.message = "Hello World";
+        assert.isNull(cecula.sendA2PSMS(messageObject));
+    });
+
     it("A2P SMS message is successfully sent", function () {
         cecula.apiKey = sandboxApiKey;
         messageObject.origin = "LAB";
         messageObject.message = "Hello World";
         cecula.sendA2PSMS(messageObject, (data) => {
+            assert.hasAllKeys(data, ["status", "reference", "sentTo", "invalid", "declined", "declineReason", "code"]);
+        });
+    });
+});
+
+describe("Sync Cloud", function () {
+    it("Checking balance without callback returns null", function () {
+        assert.isNull(cecula.getSyncCloudBalance());
+    });
+
+    it("Balance property is returned when correct API Key is provided", function () {
+        cecula.apiKey = sandboxApiKey;
+        cecula.getSyncCloudBalance({ "identity": "2349090000246" }, (data) => {
+            assert.hasAllKeys(data, ["balance"]);
+        });
+    });
+
+    it("Send P2P SMS without callback", function () {
+        cecula.apiKey = sandboxApiKey;
+        messageObject.origin = "2349090000246";
+        messageObject.message = "Hello World";
+        assert.isNull(cecula.sendP2PSMS(messageObject));
+    });
+
+    it("P2P SMS message is successfully sent", function () {
+        cecula.apiKey = sandboxApiKey;
+        messageObject.origin = "2349090000246";
+        messageObject.message = "Hello World";
+        cecula.sendP2PSMS(messageObject, (data) => {
             assert.hasAllKeys(data, ["status", "reference", "sentTo", "invalid", "declined", "declineReason", "code"]);
         });
     });
