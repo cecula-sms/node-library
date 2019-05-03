@@ -3,7 +3,6 @@ A NodeJS package for Cecula.
 
 [![NPM](https://nodei.co/npm/cecula.png)](https://nodei.co/npm/cecula/)
 
-[![npm version](https://badge.fury.io/js/cecula.svg)](https://badge.fury.io/js/cecula)
 [![Build Status](https://travis-ci.org/cecula-sms/node-library.svg?branch=master)](https://travis-ci.org/cecula-sms/node-library)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7638cf03c6b4adc807d662f2063974a)](https://www.codacy.com/app/godwin-noah/node-library?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cecula-sms/node-library&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/cecula-sms/node-library/branch/master/graph/badge.svg)](https://codecov.io/gh/cecula-sms/node-library)
