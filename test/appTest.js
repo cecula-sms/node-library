@@ -65,7 +65,7 @@ describe("A2P SMS", () => {
             origin: "",
             message: "",
             recipients: []
-        }, data => {
+        }, (data) => {
             assert.equal(data.code, "CE1002");
         });
     });
