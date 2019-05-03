@@ -9,7 +9,7 @@ cecula.sendA2PSMS = (dataObj, callback) => {
         return null;
     }
 
-    cecula._sendRequest("send/a2p", dataObj).then(result => {
+    cecula._sendRequest("send/a2p", dataObj).then((result) => {
         callback(result);
     });
 };
@@ -21,7 +21,7 @@ cecula.sendP2PSMS = (dataObj, callback) => {
         return null;
     }
 
-    cecula._sendRequest("send/p2p", dataObj).then(result => {
+    cecula._sendRequest("send/p2p", dataObj).then((result) => {
         callback(result);
     });
 };
@@ -33,7 +33,7 @@ cecula.getA2PBalance = (callback) => {
         return null;
     }
 
-    cecula._sendRequest("account/a2pbalance", {}, "GET").then(result => {
+    cecula._sendRequest("account/a2pbalance", {}, "GET").then((result) => {
         callback(result);
     });
 };
@@ -45,14 +45,14 @@ cecula.getSyncCloudBalance = (data, callback) => {
         return null;
     }
 
-    cecula._sendRequest("account/scbalance?identity=" + data.identity, {}, "GET").then(result => {
+    cecula._sendRequest("account/scbalance?identity=" + data.identity, {}, "GET").then((result) => {
         callback(result);
     });
 };
 
 // Endpoing for sending HTTP Request
 cecula._sendRequest = (endPoint, jsonData, method) => {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
         var options = {};
         if (method === "GET") {
             options = {
@@ -80,7 +80,6 @@ cecula._sendRequest = (endPoint, jsonData, method) => {
             resultObj = data;
             if (error) {
                 resolve(error);
-                return;
             }
             // convert the response to an object if it didnt come as an object
             let result = typeof resultObj === "object" ? resultObj : JSON.parse(resultObj);

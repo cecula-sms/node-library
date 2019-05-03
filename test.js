@@ -10,4 +10,3 @@ const messageObject = {
 };
 
 const lr = myCecula.sendA2PSMSAsync(messageObject);
-console.log(lr);

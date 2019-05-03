@@ -17,18 +17,18 @@ const messageObject = {
 };
 
 describe("A2P SMS", () => {
-    it("Verifying that API Key property is defined in cecula object", function () {
-        assert.exists(cecula.apiKey, "API Key exists");
+    it("Verifying that API Key property is defined but empty", function () {
+        assert.isEmpty(cecula.apiKey, "API Key exists");
     });
 
     it("API Request made without API Key returns object with code and error property", function () {
-        cecula.getA2PBalance(data => {
+        cecula.getA2PBalance((data) => {
             assert.hasAllKeys(data, ["code", "error"]);
         });
     });
 
     it("Cecula returns 401 when API key is not submitted", function () {
-        cecula.getA2PBalance(data => {
+        cecula.getA2PBalance((data) => {
             assert.equal(data.code, 401);
         });
     });
@@ -40,21 +40,21 @@ describe("A2P SMS", () => {
 
     it("Balance property is returned when correct API Key is provided", function () {
         cecula.apiKey = sandboxApiKey;
-        cecula.getA2PBalance(data => {
+        cecula.getA2PBalance((data) => {
             assert.hasAllKeys(data, ["balance"]);
         });
     });
 
     it("Missing fields during A2P Message sending returns error object", function () {
         cecula.apiKey = sandboxApiKey;
-        cecula.sendA2PSMS({}, data => {
+        cecula.sendA2PSMS({}, (data) => {
             assert.hasAllKeys(data, ["error", "code"]);
         });
     });
 
     it("Missing fields during A2P Message sending returns error code CE1001", function () {
         cecula.apiKey = sandboxApiKey;
-        cecula.sendA2PSMS({}, data => {
+        cecula.sendA2PSMS({}, (data) => {
             assert.equal(data.code, "CE1001");
         });
     });
@@ -74,7 +74,7 @@ describe("A2P SMS", () => {
         cecula.apiKey = sandboxApiKey;
         let tooLongOriginMsg = messageObject;
         tooLongOriginMsg.origin = "CECULA ALCHEMY";
-        cecula.sendA2PSMS(tooLongOriginMsg, data => {
+        cecula.sendA2PSMS(tooLongOriginMsg, (data) => {
             assert.equal(data.code, "CE1003");
         });
     });
@@ -83,7 +83,7 @@ describe("A2P SMS", () => {
         cecula.apiKey = sandboxApiKey;
         let tooLongOriginMsg = messageObject;
         tooLongOriginMsg.origin = "19827634";
-        cecula.sendA2PSMS(tooLongOriginMsg, data => {
+        cecula.sendA2PSMS(tooLongOriginMsg, (data) => {
             assert.equal(data.code, "CE1004");
         });
     });
@@ -99,7 +99,7 @@ describe("A2P SMS", () => {
         cecula.apiKey = sandboxApiKey;
         let tooLongOriginMsg = messageObject;
         tooLongOriginMsg.message = message;
-        cecula.sendA2PSMS(tooLongOriginMsg, data => {
+        cecula.sendA2PSMS(tooLongOriginMsg, (data) => {
             assert.equal(data.code, "CE1005");
         });
     });
@@ -108,7 +108,7 @@ describe("A2P SMS", () => {
         cecula.apiKey = sandboxApiKey;
         messageObject.origin = "LAB";
         messageObject.message = "Hello World";
-        cecula.sendA2PSMS(messageObject, data => {
+        cecula.sendA2PSMS(messageObject, (data) => {
             assert.hasAllKeys(data, ["status", "reference", "sentTo", "invalid", "declined", "declineReason", "code"]);
         });
     });
