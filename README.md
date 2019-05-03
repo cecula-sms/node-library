@@ -6,6 +6,7 @@ A NodeJS package for Cecula.
 [![npm version](https://badge.fury.io/js/cecula.svg)](https://badge.fury.io/js/cecula)
 [![Build Status](https://travis-ci.org/cecula-sms/node-library.svg?branch=master)](https://travis-ci.org/cecula-sms/node-library)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7638cf03c6b4adc807d662f2063974a)](https://www.codacy.com/app/godwin-noah/node-library?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cecula-sms/node-library&amp;utm_campaign=Badge_Grade)
+[![Coverage Status](https://coveralls.io/repos/github/cecula-sms/node-library/badge.svg?branch=master)](https://coveralls.io/github/cecula-sms/node-library?branch=master)
 
 ## Table of Contents
 1.  [Introduction](#introduction)
