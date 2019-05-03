@@ -9,7 +9,8 @@
     "test:istanbul": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage || true",
     "test:nyc": "nyc mocha || true",
     "coverage": "nyc report --reporter=text-lcov | coveralls || true",
-    "lint-md": "remark ."
+    "lint-md": "remark .",
+    "test:insta": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov || true"
   },
   "remarkConfig": {
     "plugins": [
