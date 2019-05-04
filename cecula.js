@@ -54,13 +54,13 @@ cecula.getSyncCloudBalance = (data, callback) => {
 cecula._sendRequest = (endPoint, jsonData, method, timeout = 36000) => {
     return new Promise((resolve, reject) => {
         var options = {
-            url: "https://api.cecula.com/" + endPoint, // cecula url
-            method: method,
-            headers: {
+            "url": "https://api.cecula.com/" + endPoint, // cecula url
+            "method": method,
+            "headers": {
                 "Authorization": "Bearer " + cecula.apiKey,
                 "cache-control": "no-cache"
             },
-            timeout: timeout
+            "timeout": timeout
         };
 
         if (["POST", "PUT", "OPTIONS", "PATCH"].indexOf(method) > -1) {
