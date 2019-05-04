@@ -51,19 +51,19 @@ cecula.getSyncCloudBalance = (data, callback) => {
 };
 
 // Endpoing for sending HTTP Request
-cecula._sendRequest = (endPoint, jsonData, method, timeout = 36000) => {
+cecula._sendRequest = (endPoint, jsonData, requestMethod, timeoutLimit = 36000) => {
     return new Promise((resolve, reject) => {
         var options = {
-            "url": "https://api.cecula.com/" + endPoint, // cecula url
-            "method": method,
-            "headers": {
+            url: "https://api.cecula.com/" + endPoint, // cecula url
+            method: requestMethod,
+            headers: {
                 "Authorization": "Bearer " + cecula.apiKey,
                 "cache-control": "no-cache"
             },
-            "timeout": timeout
+            timeout: timeoutLimit
         };
 
-        if (["POST", "PUT", "OPTIONS", "PATCH"].indexOf(method) > -1) {
+        if (["POST", "PUT", "OPTIONS", "PATCH"].indexOf(requestMethod) > -1) {
             options.headers.Accept = "application/json";
             options.headers["Content-Type"] = "application/json";
             options.json = jsonData;
