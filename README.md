@@ -8,7 +8,6 @@ A NodeJS package for Cecula.
 [![codecov](https://codecov.io/gh/cecula-sms/node-library/branch/master/graph/badge.svg)](https://codecov.io/gh/cecula-sms/node-library)
 [![Known Vulnerabilities](https://snyk.io/test/github/cecula-sms/node-library/badge.svg)](https://snyk.io/test/github/cecula-sms/node-library) 
 
-
 ## Table of Contents
 1.  [Introduction](#introduction)
 2.  [How to use the library](#how-to-use-this-library)

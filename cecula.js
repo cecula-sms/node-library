@@ -9,7 +9,7 @@ cecula.sendA2PSMS = (dataObj, callback) => {
         return null;
     }
 
-    cecula._sendRequest("send/a2p", dataObj).then((result) => {
+    cecula._sendRequest("send/a2p", dataObj, "POST").then((result) => {
         callback(result);
     });
 };
@@ -21,7 +21,7 @@ cecula.sendP2PSMS = (dataObj, callback) => {
         return null;
     }
 
-    cecula._sendRequest("send/p2p", dataObj).then((result) => {
+    cecula._sendRequest("send/p2p", dataObj, "POST").then((result) => {
         callback(result);
     });
 };
@@ -51,38 +51,31 @@ cecula.getSyncCloudBalance = (data, callback) => {
 };
 
 // Endpoing for sending HTTP Request
-cecula._sendRequest = (endPoint, jsonData, method) => {
+cecula._sendRequest = (endPoint, jsonData, method, timeout = 36000) => {
     return new Promise((resolve, reject) => {
-        var options = {};
-        if (method === "GET") {
-            options = {
-                url: "https://api.cecula.com/" + endPoint, // cecula url
-                method: "GET",
-                headers: {
-                    "Authorization": "Bearer " + cecula.apiKey
-                }
-            };
-        } else {
-            options = {
-                url: "https://api.cecula.com/" + endPoint, // cecula url
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json",
-                    "Authorization": "Bearer " + cecula.apiKey,
-                    "cache-control": "no-cache"
-                },
-                json: jsonData
-            };
+        var options = {
+            url: "https://api.cecula.com/" + endPoint, // cecula url
+            method: method,
+            headers: {
+                "Authorization": "Bearer " + cecula.apiKey,
+                "cache-control": "no-cache"
+            },
+            timeout: timeout
+        };
+
+        if (["POST", "PUT", "OPTIONS", "PATCH"].indexOf(method) > -1) {
+            options.headers.Accept = "application/json";
+            options.headers["Content-Type"] = "application/json";
+            options.json = jsonData;
         }
+
         request(options, (error, res, data) => {
-            var resultObj = {};
-            resultObj = data;
             if (error) {
                 resolve(error);
+                return;
             }
             // convert the response to an object if it didnt come as an object
-            let result = typeof resultObj === "object" ? resultObj : JSON.parse(resultObj);
+            let result = typeof data === "object" ? data : JSON.parse(data);
             resolve(result);
         });
     });

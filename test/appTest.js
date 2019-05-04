@@ -31,6 +31,13 @@ describe("A2P SMS", () => {
         assert.isNull(cecula.getA2PBalance());
     });
 
+    it("Test for none-existent endpoint", function () {
+        cecula._sendRequest("account/a2pbalance", {}, "GET", 1)
+            .then((resp) => {
+                assert.instanceOf(resp, Error);
+            });
+    });
+
     it("Cecula returns 401 when API key is not submitted", function () {
         cecula.getA2PBalance((data) => {
             assert.equal(data.code, 401);
