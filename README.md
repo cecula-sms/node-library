@@ -1,6 +1,7 @@
 # Cecula SMS
 A NodeJS package for Cecula.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7dc6b5bfdedd404882b2355a6fcd1bfb)](https://app.codacy.com/app/godwin-noah/node-library?utm_source=github.com&utm_medium=referral&utm_content=cecula-sms/node-library&utm_campaign=Badge_Grade_Dashboard)
 [![NPM](https://nodei.co/npm/cecula.png)](https://nodei.co/npm/cecula/)
 
 [![Build Status](https://travis-ci.org/cecula-sms/node-library.svg?branch=master)](https://travis-ci.org/cecula-sms/node-library)
